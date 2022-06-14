@@ -17,3 +17,17 @@ def digit_pow(n,p):
 
 liste = digit_pow(46288, 3)
 print(liste)
+#------------------------------------------------------------------
+#other function:
+def narcissistic( value ):
+    # Code away
+    number_list = [int(x) for x in str(value)]
+    pow_number = len(number_list)
+    number_list = [pow(x,pow_number) for x in number_list]
+    total_list = 0
+    for x in number_list:
+        total_list+=x
+    if total_list == value:
+        return True
+    else:
+        return False
