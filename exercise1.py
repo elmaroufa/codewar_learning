@@ -34,3 +34,16 @@ def narcissistic( value ):
 # Good solution:
 def narcissistic(value):
     return value == sum(int(x) ** len(str(value)) for x in str(value))
+  
+#----------------------------------------------------------------------------------------------------------------------------------
+#exercice 3: return total sum of the two lowest positive numbers given an array of minimum 4 positive integers
+def special_liste(liste):
+    total_num = len(liste)
+    liste = [int(x) for x in liste]
+    liste.sort()
+    p=liste[:4]
+    total = p[0] + p[1]
+    return total
+    
+liste = [19, 5, 42, 2, 77]
+print(special_liste(liste))
