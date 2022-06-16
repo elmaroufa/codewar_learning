@@ -47,3 +47,24 @@ def special_liste(liste):
     
 liste = [19, 5, 42, 2, 77]
 print(special_liste(liste))
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+# exercie 4: return string reverse total > 5
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+def spin_words(sentence):
+    def my_reverse(x):
+        if len(x) >=5:
+            return x[::-1]
+        else:
+            return x
+    my_liste = list(sentence.split(" "))
+    my_liste = [my_reverse(x) for x in my_liste]
+    
+    return ' '.join(my_liste)
+
+
+liste = "saly est amoureux de sa femme"
+print(spin_words(liste))
+#---------------other solution : -------------------------------------------------
+def spin_words(sentence):
+    # Your code goes here
+    return " ".join([x[::-1] if len(x) >= 5 else x for x in sentence.split(" ")])
