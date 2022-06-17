@@ -68,3 +68,12 @@ print(spin_words(liste))
 def spin_words(sentence):
     # Your code goes here
     return " ".join([x[::-1] if len(x) >= 5 else x for x in sentence.split(" ")])
+#------------------------------------------------------------------------------------------------------------------------------------------------
+def str_to_list( str ) :
+    my_str = list(str.strip())
+    my_str = [my_str.remove(" ")  for x in my_str if x!=" " ]
+   
+    return my_str
+ 
+modata = "string 1999977 ere dfdf fdf fdf"    
+print(str_to_list(modata))
