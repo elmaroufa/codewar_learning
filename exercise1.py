@@ -77,3 +77,23 @@ def str_to_list( str ) :
  
 modata = "string 1999977 ere dfdf fdf fdf"    
 print(str_to_list(modata))
+#--------------------------------------------------------------------------------------------------------------------------------------------------
+def create_phone_number(liste):
+    liste1 = liste[:3]
+    liste1.append(")")
+    liste1.insert(0,"(")
+    liste1 = [str(x) for x in liste1]
+    value1 = "".join(liste1)+" "
+    liste2 = liste[3:6]
+    liste2 = [str(x) for x in liste2]
+    value2 = "".join(liste2)+"-"
+    liste3 = liste[6:10]
+    liste3 = [str(x) for x in liste3]
+    value3 = value1 + value2 + "".join(liste3)
+    return value3
+    
+    
+    
+phone = [1, 2, 3, 4, 5, 6, 7, 8, 9,3,4,5]
+
+print(create_phone_number(phone))
