@@ -97,3 +97,21 @@ def create_phone_number(liste):
 phone = [1, 2, 3, 4, 5, 6, 7, 8, 9,3,4,5]
 
 print(create_phone_number(phone))
+#----------------------------------------------------------------------------------------
+#exercice 4: return sum sere
+def series_sum(n):
+    # Happy Coding ^_^
+    def result_sum(i):
+        return str("{:.2f}".format(i))
+    if n==0:
+        return result_sum(n)
+    if n==1:
+        return result_sum(n)
+    liste = [1]*(n-1)
+    i = 4
+    total_liste = 0
+    for x in liste:
+        total_liste = total_liste + (x/i)
+        i=i+3
+    total_liste = total_liste + 1
+    return result_sum(total_liste)
