@@ -115,3 +115,12 @@ def series_sum(n):
         i=i+3
     total_liste = total_liste + 1
     return result_sum(total_liste)
+#--------------------------others solution ---------------------------------
+def series_sum(n):
+    return '{:.2f}'.format(sum(1.0/(3 * i + 1) for i in range(n)))
+  
+def series_sum(n):
+    sum = 0.0
+    for i in range(0,n):
+        sum += 1 / (1 + 3 * float(i))
+    return '%.2f' % sum
