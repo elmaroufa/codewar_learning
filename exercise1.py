@@ -124,3 +124,20 @@ def series_sum(n):
     for i in range(0,n):
         sum += 1 / (1 + 3 * float(i))
     return '%.2f' % sum
+#------------------------------------------------------------------------other exercice-----------------------------------------------------------------#
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+def hight(value):
+    value = value.split(" ")
+    value = [x.lower() for x in value]
+    listeword = list(value[0])
+    listenumber = []
+    for x in listeword:
+        listenumber.append(ord(x)-96)
+    return listenumber
+
+#ord function: eturns the number representing the unicode code 
+#of a specified character.
+x= "Leilx est ma seours Et ASHAAAajass"
+b="lettre"
+print(hight(x))
