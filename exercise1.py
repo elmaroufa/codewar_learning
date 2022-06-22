@@ -127,17 +127,37 @@ def series_sum(n):
 #------------------------------------------------------------------------other exercice-----------------------------------------------------------------#
 # Online Python compiler (interpreter) to run Python online.
 # Write Python 3 code in this online editor and run it.
+# return hight value caractere
 def hight(value):
     value = value.split(" ")
     value = [x.lower() for x in value]
     listeword = list(value[0])
-    listenumber = []
-    for x in listeword:
-        listenumber.append(ord(x)-96)
-    return listenumber
+    my_dictionnaire = {}
+    i=0
+    for x in value:
+        listeword = list(value[i])
+        total_caractere = 0
+        for t in listeword:
+            total_caractere = total_caractere + (ord(t)-96)
+        my_dictionnaire["".join(listeword)] = total_caractere
+        i, total_caratere = i+1 , 0
+    hight_value = max(my_dictionnaire, key=my_dictionnaire.get)
+    return hight_value
 
 #ord function: eturns the number representing the unicode code 
 #of a specified character.
-x= "Leilx est ma seours Et ASHAAAajass"
+x= "Leilx est ma seours Et ASHAAAajass seours seours"
 b="lettre"
 print(hight(x))
+#---------------------------------Good Solution ----------------------------------------------------------------------------------------------------------#
+def high(x):
+    return max(x.split(), key=lambda k: sum(ord(c) - 96 for c in k))
+#---------------------------------------------------------------------------------------------------------------------------------------------------------#
+def high(x):
+    words=x.split(' ')
+    list = []
+    for i in words:
+        scores = [sum([ord(char) - 96 for char in i])]
+        list.append(scores)
+    return words[list.index(max(list))]
+
