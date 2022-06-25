@@ -179,3 +179,17 @@ def two_sum(numbers, target):
             
 print(two_sum([1,2,3], 4))
 #output : [0,2]
+############################################### ohter solution: ##########################################################################################
+def two_sum(nums, t):
+    for i, x in enumerate(nums):
+        for j, y in enumerate(nums):
+            if i != j and x + y == t:
+                return [i, j]
+#----------------------------------------------------------------------------------------------------------------------------------------------------              
+def two_sum(nums, target):
+    d = {}
+    for i, num in enumerate(nums):
+        diff = target - num
+        if diff in d:
+            return [d[diff], i]
+        d[num] = i
