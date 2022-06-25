@@ -124,7 +124,7 @@ def series_sum(n):
     for i in range(0,n):
         sum += 1 / (1 + 3 * float(i))
     return '%.2f' % sum
-#------------------------------------------------------------------------other exercice-----------------------------------------------------------------#
+#------------------------------------------------------------------------ exercice 6-----------------------------------------------------------------#
 # Online Python compiler (interpreter) to run Python online.
 # Write Python 3 code in this online editor and run it.
 # return hight value caractere
@@ -161,3 +161,21 @@ def high(x):
         list.append(scores)
     return words[list.index(max(list))]
 
+#----------------------------------------------------------EXERCICE 7 --------------------------------------------------------------------------------#
+'''
+Écrivez une fonction qui prend un tableau de nombres (entiers pour les tests) et un nombre cible. 
+Elle doit trouver deux éléments différents dans le tableau qui, une fois additionnés, donnent la valeur cible. 
+Les indices de ces éléments doivent être 
+renvoyés dans un tuple / une liste (en fonction de votre langue) comme suit : 
+(index1, index2).
+'''
+def two_sum(numbers, target):
+    
+    for i in range(len(numbers) - 1):
+    # search other element in the array
+        for j in range(i + 1, len(numbers)):
+            if numbers[i] + numbers[j] == target:
+                return [i,j]
+            
+print(two_sum([1,2,3], 4))
+#output : [0,2]
