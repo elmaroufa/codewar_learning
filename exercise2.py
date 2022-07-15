@@ -36,3 +36,27 @@ import re
 def domain_name(url):
     return re.search('(https?://)?(www\d?\.)?(?P<name>[\w-]+)\.', url).group('name')
 
+# ------------------------------------------------EXERCICE PHONE NUMBER FORMAT --------------------------------------------------------------------------------
+def create_phone_number(n):
+    #your code here
+    liste1 = '(' + ''.join([ str(x) for x in n[:3]]) + ')'
+    liste2 = n[3:10]
+    liste2.insert(3, '-')
+    liste2 = ''.join([str(x) for x in liste2])
+    liste = liste1 + ' ' +  liste2
+    return liste
+
+
+
+myliste = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+print(create_phone_number(myliste))
+#OUTPUT: (123) 456-7890
+
+#---------------------------------OTHER SOLUTION ---------------------------------------------------------------------------------------------------------
+def create_phone_number(n):
+    return "({}{}{}) {}{}{}-{}{}{}{}".format(*n)
+
+def create_phone_number(n):
+    n = ''.join(map(str,n))
+    return '(%s) %s-%s'%(n[:3], n[3:6], n[6:])
+
