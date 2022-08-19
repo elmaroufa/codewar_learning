@@ -79,4 +79,29 @@ def plus(y): return lambda x: x+y
 def minus(y): return lambda x: x-y
 def times(y): return lambda  x: x*y
 def divided_by(y): return lambda  x: x/y
+#_____________---------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+
+def filter_list(l):
+    'return a new list with the strings filtered out'
+    final_liste = []
+    #isinstance(myVar, int)
+    for x in l:
+        if isinstance(x, int):
+            final_liste.append(x)
+    
+    return final_liste
+    
+
+liste = [1,2,'aasf','1','123',123]
+print(filter_list(liste))
+#-----------------------------------------------------other solution --------------------------------------------------------------------------------------------
+
+def filter_list(l):
+  'return a new list with the strings filtered out'
+  return [i for i in l if not isinstance(i, str)]
+
+def filter_list(l):
+  'return a new list with the strings filtered out'
+  return [x for x in l if type(x) is not str]
