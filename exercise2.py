@@ -105,3 +105,26 @@ def filter_list(l):
 def filter_list(l):
   'return a new list with the strings filtered out'
   return [x for x in l if type(x) is not str]
+
+#_______________------------------------------------------------------------------------------------------------------------------------------------------------
+
+def pig_it(text):
+    #your code here
+    def convert_string(text):
+        if text == '!' or text == '?' :
+            return text
+        text = list(text)
+        value = text[0]
+        del text[0]
+        text.append(value)
+        return ''.join(text) + 'ay'
+    return " ".join([convert_string(x) for x in text.split(' ')])
+
+#---------------------------------------------------------------------------------------solutions for pro --------------------------------------------------------
+
+def pig_it(text):
+    lst = text.split()
+    return ' '.join( [word[1:] + word[:1] + 'ay' if word.isalpha() else word for word in lst])
+
+def pig_it(text):
+    return " ".join(x[1:] + x[0] + "ay" if x.isalnum() else x for x in text.split())
