@@ -128,3 +128,19 @@ def pig_it(text):
 
 def pig_it(text):
     return " ".join(x[1:] + x[0] + "ay" if x.isalnum() else x for x in text.split())
+
+#------------------------------------------------------------------------------exercice add text ------------------------------------------------------------------#
+
+def text(liste):
+    if len(liste) == 0:
+        return  "no one likes this"
+    elif len(liste) == 1:
+        return ' '.join(liste) + ' likes this'
+    else :
+        lastindex = len(liste) - 1
+        liste2 = liste[:lastindex]
+        liste2 = ', '.join(liste2) + ' and ' + liste[lastindex] + ' likes this'
+        return liste2
+
+liste = ["Alex", "hamed","abbo", "saly", "kone"]
+print(text(liste))
