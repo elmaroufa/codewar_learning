@@ -144,3 +144,32 @@ def text(liste):
 
 liste = ["Alex", "hamed","abbo", "saly", "kone"]
 print(text(liste))
+
+#--------------------------------------------------------------------------------------ALGO SEARCH SEQUENCIAL -----------------------------------------
+
+def findValueListe(liste,value):
+   return value in liste ,value
+   
+def otherMethods(liste, value):
+    value_control = None
+    i = 0
+    for x in liste:
+        if value == x :
+            value_control = x
+            i+=1
+    return value_control,i
+#------other funcion---------------------------------------------------------------------------------------------------------------------------------------------
+@classmethod
+
+def SequentialSearch(cls, arr, value):
+    size = len(arr)
+    i = 0
+    while i < size:
+        if value == arr[i]:
+            return True
+        i += 1
+    return False
+
+liste = [1,2,4,5,4,5,4,4,4,4,4,5]
+value=5
+print(otherMethods(liste, value))
