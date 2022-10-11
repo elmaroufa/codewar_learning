@@ -173,3 +173,22 @@ def SequentialSearch(cls, arr, value):
 liste = [1,2,4,5,4,5,4,4,4,4,4,5]
 value=5
 print(otherMethods(liste, value))
+#-------------------------------------------------------Binary Search in pyhton -------------------------------------------------------------------------
+def binarySearch(arr, value):
+    size = len(arr)
+    low = 0
+    high = size - 1
+    while low <= high:
+        mid = low + (high - low) / 2
+        mid= int(mid)
+        if arr[mid] == value:
+            return True
+        else:
+            if arr[mid] < value:
+                low = mid + 1
+            else:
+                high = mid - 1
+    return False
+    
+arr= [1,2,3,4,5,6,7,8]
+print(binarySearch(arr,8))
