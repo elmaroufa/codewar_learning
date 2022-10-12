@@ -192,3 +192,15 @@ def binarySearch(arr, value):
     
 arr= [1,2,3,4,5,6,7,8]
 print(binarySearch(arr,8))
+#------------------------------------------EXO INVERSE ARRAY ------------------------------------------------------------------------------------------
+def inverseArray(array):
+    index = len(array) - 1
+    inverse_array = []
+    while index >=0:
+        inverse_array.append(array[index])
+        index = index -1
+        
+    return inverse_array
+    
+array = ['a','b',5,5,'b','e','r','t','y']
+print(inverseArray(array))
