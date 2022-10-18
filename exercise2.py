@@ -204,3 +204,18 @@ def inverseArray(array):
     
 array = ['a','b',5,5,'b','e','r','t','y']
 print(inverseArray(array))
+#------------------------------------------------------ALGO PERMUTATION ----------------------------------------------------------------------------------
+
+def permute(liste, k):
+    j = k
+    i = 0 
+    while i < j:
+        liste[i],liste[j] = liste[j],liste[i]
+        i+=1
+        j-=1
+    return liste
+        
+liste = [1,3,4,5,6,7,8]
+size = len(liste) -1
+k = 3
+print(permute(liste, k))
