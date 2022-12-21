@@ -224,3 +224,23 @@ liste = [1,3,4,5,6,7,8]
 size = len(liste) -1
 k = 3
 print(rotateLiss(liste, k))
+#-------------------------------------------------------------------------------------------------------------------------------
+# my solution
+def generate_hashtag(s):
+    #your code here
+    if len(s) == 0 or s.isspace() :
+        return False
+    if len(s) == 140 or len(s) > 140:
+        return False
+    result = s.split()
+    result = ''.join([x.capitalize() for x in result])
+    return "#" + result
+# Best solution:
+def generate_hashtag(s):
+    output = "#"
+    
+    for word in s.split():
+        output += word.capitalize()
+    
+    return False if (len(s) == 0 or len(output) > 140) else output
+        
