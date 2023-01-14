@@ -243,4 +243,18 @@ def generate_hashtag(s):
         output += word.capitalize()
     
     return False if (len(s) == 0 or len(output) > 140) else output
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------
+
+def fact(n):
+    if n<=0 or n==1:
+        return 1
+    p=n
+    while n>1:
+        p=p*(n-1)
+        n -= 1
+    return p
+    
+val = fact(0)
+print(val)
         
