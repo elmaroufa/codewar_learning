@@ -205,20 +205,21 @@ def inverseArray(array):
 array = ['a','b',5,5,'b','e','r','t','y']
 print(inverseArray(array))
 #------------------------------------------------------ALGO PERMUTATION ----------------------------------------------------------------------------------
-def reverse(liste, k,iterateur):
+def reverse(liste, iterateur, k):
     j = k
     i = iterateur 
     while i < j:
         liste[i],liste[j] = liste[j],liste[i]
         i+=1
         j-=1
-    return liste
+    #return liste
 
 def rotateLiss(liste, position):
-    size = len(liste) - 1
-    liste1 = reverse(liste, position, 0)
-    liste2 = reverse(liste,size,position-1)
-    return liste1, liste2
+    size = len(liste) 
+    reverse(liste, 0, position-1)
+    reverse(liste,position, size-1)
+    reverse(liste,0,size-1)
+    return liste
         
 liste = [1,3,4,5,6,7,8]
 size = len(liste) -1
