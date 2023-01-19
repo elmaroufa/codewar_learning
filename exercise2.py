@@ -259,3 +259,22 @@ def fact(n):
 val = fact(0)
 print(val)
         
+#----------------------------------------------------Binary Searcg----------------------------------------------------------------------------------
+def binarySearch(value,liste):
+    low = 0
+    size = len(liste)
+    hight = size -1
+    while low <= hight:
+        mid = int(low + ((hight - low)/2))
+        print(mid)
+        if liste[mid] == value:
+            return True
+        else:
+            if liste[mid] < value:
+                low = mid + 1
+            else:
+                hight = mid -1
+    return False
+ 
+liste = [1, 1, 3, 5, 7, 9, 10, 11, 19, 19]  
+print(binarySearch(19,liste))
