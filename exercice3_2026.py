@@ -100,3 +100,24 @@ arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
 somme, sous_tableau = kadane(arr)
 print(f"Somme max       : {somme}")           # 6
 print(f"Sous-tableau    : {sous_tableau}")     # [4, -1, 2, 1]
+
+def two_sum(target, arr):
+    i=0
+    size = len(arr) -1
+    while i < size :
+        j = i+1
+        while j <= size:
+            if target == arr[i] + arr[j]:
+                return i,j
+            j+=1
+        i+=1
+    return False
+
+for i, x in enumerate(nums):
+    partenaire = target - x
+    
+    if partenaire in vu:
+        # On a trouvé la solution !
+        return [..., i] # Que faut-il mettre ici ?
+    
+    vu[x] = i
